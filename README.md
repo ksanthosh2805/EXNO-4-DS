@@ -31,7 +31,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 
-df=pd.read_csv("bmi (2).csv")
+df=pd.read_csv("bmi.csv")
 df.head()
 ```
 
@@ -58,7 +58,7 @@ max_vals
 ```PYTHON
 from sklearn.preprocessing import StandardScaler
 sc=StandardScaler()
-df1=pd.read_csv("bmi (2).csv")
+df1=pd.read_csv("bmi.csv")
 df1[['Height','Weight']]=sc.fit_transform(df[['Height','Weight']])
 df1.head(10)
 ```
@@ -80,7 +80,7 @@ df.head(10)
 ### PERFORM NORMALIZER:
 ```PYTHON
 from sklearn.preprocessing import Normalizer
-df2=pd.read_csv("bmi (2).csv")
+df2=pd.read_csv("bmi.csv")
 scaler=Normalizer()
 df2[['Height','Weight']]=scaler.fit_transform(df2[['Height','Weight']])
 df2
@@ -93,7 +93,7 @@ df2
 ### PERFORM MAXABSSCALER:
 ```PYTHON
 from sklearn.preprocessing import MaxAbsScaler
-df3=pd.read_csv("bmi (2).csv")
+df3=pd.read_csv("bmi.csv")
 scaler=MaxAbsScaler()
 df3[['Height','Weight']]=scaler.fit_transform(df3[['Height','Weight']])
 df3
@@ -105,7 +105,7 @@ df3
 ### PERFORM ROBUSTSCALER:
 ```PYTHON
 from sklearn.preprocessing import RobustScaler
-df4=pd.read_csv("bmi (2).csv")
+df4=pd.read_csv("bmi.csv")
 scaler=RobustScaler()
 df4[['Height','Weight']]=scaler.fit_transform(df4[['Height','Weight']])
 df4
